@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta description="" content="" />
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic"
+      media="all"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              white: "#FFFFFF",
+              fadeWhite: "#fcfcfc",
+              deepGreen: "#314c5f",
+              lightGreen: "#05aeb5",
+              lightGreen2: "#f0f4f5",
+              backgroundGreen: "#C4F4F8",
+              gray: "#808080",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./asset/facon.png" type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>incheq clone || Jamleads</title>
+  </head>
+
+  <body class="bg-lightGreen2">
+    <div class="preloader animate">
+      <img src="./asset/facon.png" alt="" />
+    </div>
+
+    <div class="cursor"></div>
+
+    <section class="nav">
+      <div
+        class="nav-top lg:px-10 px-3 py-2 bg-deepGreen flex items-center lg:justify-end justify-between"
+      >
+        <p class="first-p">
+          <a
+            href="tell:09067942127"
+            class="nav-top-link lg:text-md text-sm text-fadeWhite"
+          >
+            Call us (AU) 1300 400 290
+          </a>
+        </p>
+        <p>
+          <a href="./signin.html" class="nav-top-signin ml-5 text-fadeWhite">
+            Sign in
+            <span class="signin-icon text-gray ml-1"
+              ><i class="fa-regular fa-share-from-square"></i
+            ></span>
+          </a>
+        </p>
+      </div>
+
+      <div class="nav-brand lg:py-7 lg:px-10">
+        <div class="nav-brand-logo">
+          <a href="./index.html"
+            ><img src="./asset/incheq-logo.svg" alt=""
+          /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li class="nav-link nav-business-drop">
+            <a href="">Business Solution</a>
+          </li>
+          <li class="nav-link nav-science-drop"><a href="">Science </a></li>
+          <li class="nav-link no-drop"><a href="">About </a></li>
+          <li class="nav-link no-drop"><a href="">Pricing </a></li>
+          <li class="nav-link nav-resources-drop"><a href="">Resources </a></li>
+          <li class="nav-link no-drop">
+            <a href="./contact.html">Contact </a>
+          </li>
+        </ul>
+
+        <div class="nav-btn">
+          <button class="btn">Get In Touch</button>
+        </div>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="red"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="nav-toggle"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+
+      <div class="dropdown business-dropdown hidden">
+        <div class="dropdown-wrap">
+          <div class="side side1">
+            <h2><a href="#">Platform</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+
+          <div class="side side2">
+            <h2><a href="#">Services</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown science-dropdown hidden">
+        <div class="dropdown-wrap">
+          <div class="side side1">
+            <h2><a href="#">Our Approach</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+
+          <div class="side side2">
+            <h2><a href="#">Data Science</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown resources-dropdown hidden">
+        <div class="resources-dropdown-wrap">
+          <div class="side side1">
+            <h2><a href="#">Blog</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+
+          <div class="side side2">
+            <h2><a href="#">WHS Regulations</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+
+          <div class="side side3">
+            <h2><a href="#">FAQs</a></h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+              distinctio, aut est iste fugiat deleniti vel magnam harum adipisci
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="nav-mobile accordian">
+      <div class="accordian-item">
+        <div class="accordian-head accordian-btn">
+          <a href="" class="nav-mobile-link">Business Solution</a>
+          <img src="./asset/Vector.svg" alt="" />
+        </div>
+        <div class="accordian-body hide">
+          <ul>
+            <li><a href="" class="nav-mobile-drop-link">Platform</a></li>
+            <li><a href="" class="nav-mobile-drop-link">Services</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-head accordian-btn">
+          <a href="" class="nav-mobile-link">Science</a>
+          <img src="./asset/Vector.svg" alt="" />
+        </div>
+        <div class="accordian-body hide">
+          <ul>
+            <li><a href="" class="nav-mobile-drop-link">Platform</a></li>
+            <li><a href="" class="nav-mobile-drop-link">Services</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-head">
+          <a href="" class="nav-mobile-link">Abount</a>
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-head">
+          <a href="" class="nav-mobile-link">Pricing</a>
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-head accordian-btn">
+          <a href="" class="nav-mobile-link">Resources</a>
+          <img src="./asset/Vector.svg" alt="" />
+        </div>
+        <div class="accordian-body hide">
+          <ul>
+            <li><a href="" class="nav-mobile-drop-link">Platform</a></li>
+            <li><a href="" class="nav-mobile-drop-link">Services</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordian-item">
+        <div class="accordian-head">
+          <a href="./contact.html" class="nav-mobile-link">Contact</a>
+        </div>
+      </div>
+
+      <button>Get in Touch</button>
+    </div>
+
+    <section class="showcase">
+      <div class="showcase-background"></div>
+      <div class="img-float">
+        <img src="./asset/showcase-img-float.svg" alt="" />
+      </div>
+
+      <div class="showcase-head lg:px-40 lg:py-28">
+        <div>INCHEQ</div>
+        <h5>
+          <span>Unlock human potential</span> through psychological safety at
+          work.
+        </h5>
+
+        <div class="showcase-head-emp">
+          <p>
+            We’re empowering organisations to create safer, healthier
+            workplaces, whilst reaping the business benefits.
+          </p>
+          <div class="showcase-head-btn">
+            <button class="showcase-head-btn1">Our Platform</button>
+            <button class="showcase-head-btn2">Book a consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-path">
+        <img src="./asset/showcase-img-path.webp" alt="" />
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-links">
+          <div class="business-links">
+            <p>Business Solutions</p>
+            <ul>
+              <li class="footer-link">Platform</li>
+              <li class="footer-link">Services</li>
+            </ul>
+          </div>
+
+          <div class="science-limks">
+            <p>Science</p>
+            <ul>
+              <li class="footer-link">Our approach</li>
+              <li class="footer-link">Data science</li>
+            </ul>
+          </div>
+
+          <div class="resources-limks">
+            <p>Resources</p>
+            <ul>
+              <li class="footer-link">Blog</li>
+              <li class="footer-link">WHS regulations</li>
+              <li class="footer-link">FAQs</li>
+            </ul>
+          </div>
+
+          <div class="company-limks">
+            <p>Company</p>
+            <ul>
+              <li class="footer-link">About</li>
+              <li class="footer-link">Contact</li>
+              <li class="footer-link">Pricing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="newsletter">
+          <div class="newsletter-wrap">
+            <div class="newsletter-wrap-text">
+              <h2>Join our newsletter<br /><span>to stay up to date</span></h2>
+              <input type="email" placeholder="Enter your Email" />
+              <button>Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-down">
+        <div class="incheq-ack">
+          <a href="./index.html"
+            ><img src="./asset/incheq-logo.svg" alt=""
+          /></a>
+
+          <p>
+            We acknowledge the Traditional Owners of the land where we work and
+            live, the Gadigal people of the Eora Nation and pay our respects to
+            Elders past, present, and emerging. We celebrate the stories,
+            culture and traditions of Aboriginal and Torres Strait Islander
+            Elders of all communities who also work and live on this land.
+          </p>
+
+          <div class="policy">
+            <a href="" class="footer-link">Terms and Conditions</a>
+            <a href="" class="footer-link ml-5"> Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <div class="social-link-wrap">
+            <div class="social-link-icons">
+              <div class="social-link-icons-wrap">
+                <div class="socil-link-icon facebook">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <div class="socil-link-icon twitter">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="socil-link-icon instaram">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="socil-link-icon linkedin">
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+
+              <div class="right">
+                <a href="">&copy; 2023 InCheq. All Rights Reserved</a>
+                <a href="" class="jamleads">Website by Jamleads</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/fc49c28ef9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
